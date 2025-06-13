@@ -1,0 +1,82 @@
+{
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorCustomizations": {
+    "editor.background": "#1e1e1e",
+    "sideBar.background": "#252526",
+    "activityBar.background": "#2d1b1b",
+    "statusBar.background": "#8b3939",
+    "statusBar.foreground": "#ffffff",
+    "titleBar.activeBackground": "#6b2c2c",
+    "titleBar.activeForeground": "#ffffff",
+    "tab.activeBackground": "#3c2929",
+    "tab.inactiveBackground": "#2d1b1b",
+    "editor.selectionBackground": "#663d3d",
+    "editor.lineHighlightBackground": "#2d1b1b",
+    "editorGroupHeader.tabsBackground": "#252526",
+    "panel.background": "#1e1e1e",
+    "terminal.background": "#1a1a1a",
+    "button.background": "#b85555",
+    "button.hoverBackground": "#c66666",
+    "focusBorder": "#b85555",
+    "inputOption.activeForeground": "#ffffff",
+    "dropdown.background": "#3c2929",
+    "list.hoverBackground": "#2d1b1b",
+    "list.activeSelectionBackground": "#663d3d",
+    "editorWidget.background": "#2d1b1b",
+    "editorSuggestWidget.background": "#2d1b1b",
+    "editorHoverWidget.background": "#2d1b1b"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword",
+        "settings": {
+          "foreground": "#ff6b6b"
+        }
+      },
+      {
+        "scope": "string",
+        "settings": {
+          "foreground": "#ffa8a8"
+        }
+      },
+      {
+        "scope": "function",
+        "settings": {
+          "foreground": "#ff8e8e"
+        }
+      },
+      {
+        "scope": "variable",
+        "settings": {
+          "foreground": "#ffc9c9"
+        }
+      },
+      {
+        "scope": "comment",
+        "settings": {
+          "foreground": "#8b5a5a",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "support.type",
+        "settings": {
+          "foreground": "#ff9999"
+        }
+      }
+    ]
+  },
+  "editor.fontFamily": "'Fira Code', 'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.6,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.minimap.enabled": true,
+  "editor.minimap.decorations": true,
+  "breadcrumbs.enabled": true,
+  "terminal.integrated.fontSize": 13,
+  "window.zoomLevel": 0
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect, MouseEvent } from 'react';
+import { useState, useRef, useEffect, useCallback, MouseEvent } from 'react';
 
 interface ColorPickerProps {
   color: string;
@@ -15,7 +15,6 @@ interface HSV {
 
 export default function ColorPicker({ color, onChange }: ColorPickerProps) {
   const [hsv, setHsv] = useState<HSV>({ h: 0, s: 100, v: 100 });
-  const [isDragging, setIsDragging] = useState(false);
   const wheelRef = useRef<HTMLCanvasElement>(null);
   const triangleRef = useRef<HTMLCanvasElement>(null);
 
@@ -29,8 +28,8 @@ export default function ColorPicker({ color, onChange }: ColorPickerProps) {
     const diff = max - min;
 
     let h = 0;
-    let s = max === 0 ? 0 : diff / max;
-    let v = max;
+    const s = max === 0 ? 0 : diff / max;
+    const v = max;
 
     if (diff !== 0) {
       switch (max) {
@@ -81,7 +80,7 @@ export default function ColorPicker({ color, onChange }: ColorPickerProps) {
     return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
   };
 
-  const drawColorWheel = () => {
+  const drawColorWheel = useCallback(() => {
     const canvas = wheelRef.current;
     if (!canvas) return;
 
@@ -123,9 +122,9 @@ export default function ColorPicker({ color, onChange }: ColorPickerProps) {
     ctx.strokeStyle = '#333';
     ctx.lineWidth = 2;
     ctx.stroke();
-  };
+  }, [hsv.h]);
 
-  const drawSaturationValue = () => {
+  const drawSaturationValue = useCallback(() => {
     const canvas = triangleRef.current;
     if (!canvas) return;
 
@@ -164,7 +163,7 @@ export default function ColorPicker({ color, onChange }: ColorPickerProps) {
     ctx.strokeStyle = '#333';
     ctx.lineWidth = 2;
     ctx.stroke();
-  };
+  }, [hsv]);
 
   const handleWheelClick = (e: MouseEvent<HTMLCanvasElement>) => {
     const canvas = wheelRef.current;
@@ -219,11 +218,11 @@ export default function ColorPicker({ color, onChange }: ColorPickerProps) {
 
   useEffect(() => {
     drawColorWheel();
-  }, [hsv.h]);
+  }, [drawColorWheel]);
 
   useEffect(() => {
     drawSaturationValue();
-  }, [hsv]);
+  }, [drawSaturationValue]);
 
   return (
     <div className="space-y-6">

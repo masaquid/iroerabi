@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# いろえらび - 透明感のあるガラスモーフィズムの色を体感する
 
-## Getting Started
+美しいグラスモーフィズムデザインで色を選ぶ新体験。選択した色に基づいて動的にグラデーション背景が変化し、透明感のあるガラス効果と共に詳細な色情報を表示します。
 
-First, run the development server:
+## 特徴
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🎨 **インタラクティブなカラーピッカー** - 直感的な色選択
+- 🌈 **動的グラデーション背景** - 選択した色に基づく美しいグラデーション
+- 📊 **詳細な色情報表示** - HEX、RGB、HSL値の表示
+- ✨ **グラスモーフィズムデザイン** - 現代的で美しいUI
+- 📱 **レスポンシブデザイン** - モバイルからデスクトップまで対応
+- 🎭 **アニメーション効果** - スムーズなトランジション
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 技術スタック
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **フレームワーク**: Next.js 15.3.3
+- **言語**: TypeScript
+- **スタイリング**: Tailwind CSS v4
+- **ランタイム**: React 19
+- **開発ツール**: ESLint, TypeScript
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 機能詳細
 
-## Learn More
+### カラーピッカー
+- スライダーベースの色選択
+- リアルタイムプレビュー
+- HEX値での直接入力対応
 
-To learn more about Next.js, take a look at the following resources:
+### 動的背景
+- 選択した色の補色を自動計算
+- 3点グラデーション（原色→中間色→補色）
+- スムーズなトランジション効果
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 色情報表示
+- HEX値（16進数）
+- RGB値（赤・緑・青）
+- HSL値（色相・彩度・明度）
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ライセンス
 
-## Deploy on Vercel
+MIT License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 作者
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+このプロジェクトに関する質問や提案があれば、Issues からお気軽にお知らせください。
